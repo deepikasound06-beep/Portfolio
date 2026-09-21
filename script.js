@@ -1,13 +1,14 @@
-const roboticsVideo = document.getElementById('robotics-video');
+const roboticsVideo = document.getElementById('roboticsVideo');
 
 if (roboticsVideo) {
+  // Play video on hover
   roboticsVideo.addEventListener('mouseenter', () => {
     roboticsVideo.play();
   });
 
+  // Pause and reset video when cursor leaves
   roboticsVideo.addEventListener('mouseleave', () => {
     roboticsVideo.pause();
-    // Optional: Reset to beginning when leaving
-    roboticsVideo.currentTime = 0; 
+    roboticsVideo.currentTime = 0;
   });
 }
