@@ -177,7 +177,7 @@ section{
 .project-card p {
   text-align: left;
   margin-top: 1rem;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   
 }
 .firewheel img {
@@ -200,7 +200,7 @@ section{
   height: auto;            /* Maintains the video's original aspect ratio */
   display: block;
 }
-.robotics-mov video{
+.video video{
   margin-top: 3rem;
   display: flex;
   justify-content: center;
@@ -212,7 +212,7 @@ section{
   display: block;
   transition: 0.3s ease-in-out;
 }
-.robotics-mov video:hover{
+.video video:hover{
   box-shadow: 0 0 25px var(--tertiary-color), 
               0 0 50px var(--tertiary-color);
 }
@@ -220,7 +220,30 @@ section{
   display: flex;
   gap: 3rem; /* Space between the two image blocks */
   margin-top: 2rem;
+  width: 75%;
+}
+.glider{
+  display: flex;
+  gap: 3rem; /* Space between the two image blocks */
+  margin-top: 2rem;
   width: 60%;
+}
+.soldering {
+  display: flex;
+  gap: 3rem;
+  margin-top: 2rem;
+  width: 90%;
+}
+/* Ensure each video item shares equal flex space */
+.soldering .video {
+  flex: 1;
+  width: 100%;
+}
+/* Make sure the video tag fills its parent container correctly */
+.soldering .video video {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 .media-item {
   display: flex;
@@ -234,6 +257,10 @@ section{
   display: block;
 }
 .media-item p{
+  margin-top: 1rem;
+  text-align: left;
+}
+.video p{
   margin-top: 1rem;
   text-align: left;
 }
